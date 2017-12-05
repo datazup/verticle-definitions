@@ -41,7 +41,7 @@
     "className":"com.alerter.vertx.verticles.standalone.PipelineTcpServerVerticle",
     "deploymentOptions":{
       "config":{
-        "port": 9070,
+        "port": 9071,
         "SEND_TIMEOUT": 60000,
         "maxSocketFrameSize": 2147483647
       }
@@ -174,7 +174,7 @@
     "className":"com.alerter.vertx.verticles.webserver.SwaggerTenantWebServerVerticle",
     "deploymentOptions":{
       "config":{
-        "port": 8086
+        "port": 8087
       }
     }
   },
