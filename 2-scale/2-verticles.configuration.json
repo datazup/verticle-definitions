@@ -12,7 +12,7 @@
     "className":"com.alerter.vertx.verticles.websocket.InternalWebSocketPipelineVerticle",
     "deploymentOptions":{
       "config":{
-        "port": 7070,
+        "port": 7071,
         "topic":"/eventbus/*",
         "SEND_TIMEOUT": 60000,
         "maxSocketFrameSize": 2147483647
