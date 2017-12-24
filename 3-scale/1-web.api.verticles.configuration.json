@@ -1,0 +1,22 @@
+[
+  {
+    "className":"com.alerter.vertx.verticles.websocket.ClientWebSocketPipelineVerticle",
+    "deploymentOptions":{
+      "config":{
+        "port": 7080,
+        "topic":"/dashboard/*",
+        "topicRegister":"/dashboard/handler/register",
+        "SEND_TIMEOUT": 60000,
+        "maxSocketFrameSize": 100000
+      }
+    }
+  },
+  {
+    "className":"com.alerter.vertx.verticles.webserver.SwaggerTenantWebServerVerticle",
+    "deploymentOptions":{
+      "config":{
+        "port": 8086
+      }
+    }
+  }
+]
