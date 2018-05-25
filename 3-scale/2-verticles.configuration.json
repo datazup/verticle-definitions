@@ -181,6 +181,12 @@
     "deploymentOptions":{
       "instances":2
     }
+  },
+  {
+    "className":"com.alerter.vertx.verticles.sourcetarget.generic.LdapExecutorVerticle",
+    "deploymentOptions":{
+      "instances":1
+    }
   }
 
 
