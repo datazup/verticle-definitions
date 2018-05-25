@@ -27,5 +27,10 @@
     "className":"com.alerter.vertx.verticles.sourcetarget.generic.MqttClientExecutorVerticle",
     "deploymentOptions":{
     }
+  },
+  {
+    "className":"com.alerter.vertx.verticles.sourcetarget.generic.S3ExecutorVerticle",
+    "deploymentOptions":{
+    }
   }
 ]
