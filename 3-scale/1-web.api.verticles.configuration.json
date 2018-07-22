@@ -18,5 +18,13 @@
         "port": 8086
       }
     }
+  },
+  {
+    "className":"com.alerter.vertx.verticles.webserver.HtmlTenantWebServerVerticle",
+    "deploymentOptions":{
+      "config":{
+        "port": 8087
+      }
+    }
   }
 ]

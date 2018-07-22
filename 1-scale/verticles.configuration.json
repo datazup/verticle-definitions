@@ -188,6 +188,14 @@
     }
   },
   {
+    "className":"com.alerter.vertx.verticles.webserver.HtmlTenantWebServerVerticle",
+    "deploymentOptions":{
+      "config":{
+        "port": 8087
+      }
+    }
+  },
+  {
     "className":"com.alerter.vertx.verticles.sourcetarget.generic.ElasticsearchExecutorVerticle",
     "deploymentOptions":{
       "instances":8
