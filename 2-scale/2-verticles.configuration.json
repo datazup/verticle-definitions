@@ -9,6 +9,15 @@
     }
   },
   {
+    "className":"com.alerter.vertx.verticles.bridge.TcpBridgeVerticle",
+    "deploymentOptions":{
+      "instances":2,
+      "config":{
+        "port": 7000
+      }
+    }
+  },
+  {
     "className":"com.alerter.vertx.verticles.websocket.InternalWebSocketPipelineVerticle",
     "deploymentOptions":{
       "config":{
@@ -187,7 +196,13 @@
   {
     "className":"com.alerter.vertx.verticles.sourcetarget.generic.ElasticsearchExecutorVerticle",
     "deploymentOptions":{
-      "instances":8
+      "instances":4
+    }
+  },
+  {
+    "className":"com.alerter.vertx.verticles.standalone.PipelineFutureRunnerVerticle",
+    "deploymentOptions":{
+      "instances":2
     }
   }
 

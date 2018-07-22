@@ -9,6 +9,15 @@
     }
   },
   {
+    "className":"com.alerter.vertx.verticles.bridge.TcpBridgeVerticle",
+    "deploymentOptions":{
+      "instances":1,
+      "config":{
+        "port": 7000
+      }
+    }
+  },
+  {
     "className":"com.alerter.vertx.verticles.websocket.InternalWebSocketPipelineVerticle",
     "deploymentOptions":{
       "config":{
@@ -183,7 +192,12 @@
     "deploymentOptions":{
       "instances":8
     }
+  },
+  {
+    "className":"com.alerter.vertx.verticles.standalone.PipelineFutureRunnerVerticle",
+    "deploymentOptions":{
+      "instances":4
+    }
   }
-
 
 ]

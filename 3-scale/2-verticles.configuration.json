@@ -9,6 +9,15 @@
     }
   },
   {
+    "className":"com.alerter.vertx.verticles.bridge.TcpBridgeVerticle",
+    "deploymentOptions":{
+      "instances":4,
+      "config":{
+        "port": 7000
+      }
+    }
+  },
+  {
     "className":"com.alerter.vertx.verticles.websocket.InternalWebSocketPipelineVerticle",
     "deploymentOptions":{
       "config":{
@@ -168,7 +177,10 @@
     }
   },
   {
-    "className":"com.alerter.vertx.verticles.sourcetarget.social.SNSVerticleMonitor"
+    "className":"com.alerter.vertx.verticles.sourcetarget.social.SNSVerticleMonitor",
+    "deploymentOptions":{
+      "instances":4
+    }
   },
   {
     "className":"com.alerter.vertx.verticles.activityexecutors.ReportingExecutorVerticle",
@@ -186,6 +198,12 @@
     "className":"com.alerter.vertx.verticles.sourcetarget.generic.LdapExecutorVerticle",
     "deploymentOptions":{
       "instances":1
+    }
+  },
+  {
+    "className":"com.alerter.vertx.verticles.standalone.PipelineFutureRunnerVerticle",
+    "deploymentOptions":{
+      "instances":4
     }
   }
 
