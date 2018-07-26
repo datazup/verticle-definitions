@@ -139,6 +139,9 @@
     }
   },
   {
+    "className":"com.alerter.vertx.verticles.sourcetarget.internal.InternalProfileExecutorVerticle"
+  },
+  {
     "className":"com.alerter.vertx.verticles.sourcetarget.generic.EmailExecutorVerticle"
   },
   {

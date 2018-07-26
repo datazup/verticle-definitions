@@ -186,22 +186,6 @@
     }
   },
   {
-    "className":"com.alerter.vertx.verticles.webserver.SwaggerTenantWebServerVerticle",
-    "deploymentOptions":{
-      "config":{
-        "port": 8086
-      }
-    }
-  },
-  {
-    "className":"com.alerter.vertx.verticles.webserver.HtmlTenantWebServerVerticle",
-    "deploymentOptions":{
-      "config":{
-        "port": 8087
-      }
-    }
-  },
-  {
     "className":"com.alerter.vertx.verticles.sourcetarget.generic.ElasticsearchExecutorVerticle",
     "deploymentOptions":{
       "instances":4
@@ -212,7 +196,12 @@
     "deploymentOptions":{
       "instances":2
     }
+  },
+  {
+    "className":"com.alerter.vertx.verticles.sourcetarget.internal.InternalProfileExecutorVerticle"
+  },
+  {
+    "className":"com.alerter.vertx.verticles.sourcetarget.generic.S3ExecutorVerticle"
   }
-
 
 ]
