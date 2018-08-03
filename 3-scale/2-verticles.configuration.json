@@ -1,13 +1,5 @@
 [
   {
-    "className": "com.alerter.vertx.verticles.scheduler.ScheduleHolderVerticle"
-  },
-  {
-    "className": "com.alerter.vertx.verticles.scheduler.ScheduleFacadeVerticle",
-    "deploymentOptions": {
-    }
-  },
-  {
     "className": "com.alerter.vertx.verticles.bridge.TcpBridgeVerticle",
     "deploymentOptions": {
       "instances": 8,
@@ -39,9 +31,6 @@
     "deploymentOptions": {
       "instances": 4
     }
-  },
-  {
-    "className": "com.alerter.vertx.verticles.pipeline.ScheduledPipelineVerticle"
   },
   {
     "className": "com.alerter.vertx.verticles.standalone.PipelinePubSubVerticle",

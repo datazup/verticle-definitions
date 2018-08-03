@@ -1,14 +1,5 @@
 [
   {
-    "className":"com.alerter.vertx.verticles.scheduler.ScheduleHolderVerticle"
-  },
-  {
-    "className":"com.alerter.vertx.verticles.scheduler.ScheduleFacadeVerticle",
-    "deploymentOptions":{
-
-    }
-  },
-  {
     "className":"com.alerter.vertx.verticles.bridge.TcpBridgeVerticle",
     "deploymentOptions":{
       "instances":4,
@@ -36,9 +27,6 @@
     "deploymentOptions":{
       "instances":2
     }
-  },
-  {
-    "className":"com.alerter.vertx.verticles.pipeline.ScheduledPipelineVerticle"
   },
   {
     "className":"com.alerter.vertx.verticles.standalone.PipelinePubSubVerticle",
@@ -153,7 +141,7 @@
   {
     "className":"com.alerter.vertx.verticles.sourcetarget.generic.RedisExecutorVerticle",
     "deploymentOptions":{
-      "instances":1
+      "instances":1,"worker":true
     }
   },
 
