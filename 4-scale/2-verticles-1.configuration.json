@@ -194,7 +194,7 @@
   {
     "className":"com.alerter.vertx.verticles.sourcetarget.generic.ElasticsearchExecutorVerticle",
     "deploymentOptions":{
-      "instances":2
+      "instances":2, "worker":true
     }
   },
   {
