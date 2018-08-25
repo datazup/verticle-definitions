@@ -172,6 +172,9 @@
     "deploymentOptions":{
       "config":{
         "port": 8086
+      },
+      "swaggerConfig":{
+        "cors":"*"
       }
     }
   },
