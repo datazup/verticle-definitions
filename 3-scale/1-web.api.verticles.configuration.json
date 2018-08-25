@@ -15,10 +15,14 @@
     "className":"com.alerter.vertx.verticles.webserver.SwaggerTenantWebServerVerticle",
     "deploymentOptions":{
       "config":{
-        "port": 8086
-      },
-      "swaggerConfig":{
-        "cors":"*"
+        "port": 8086,
+        "swaggerConfig":{
+          "cors": {
+            "domains":"*",
+            "methods":["GET", "POST", "PUT", "DELETE", "OPTIONS"],
+            "headers":["Authorization","Content-Type","Accept","Origin","User-Agent", "Cache-Control", "Keep-Alive","X-Requested-With"]
+          }
+        }
       }
     }
   },
