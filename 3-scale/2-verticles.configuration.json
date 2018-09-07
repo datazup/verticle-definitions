@@ -2,7 +2,7 @@
   {
     "className": "com.alerter.vertx.verticles.bridge.TcpBridgeVerticle",
     "deploymentOptions": {
-      "instances": 8,
+      "instances": 16,
       "config": {
         "port": 7000
       }
@@ -11,7 +11,7 @@
   {
     "className": "com.alerter.vertx.verticles.websocket.InternalWebSocketPipelineVerticle",
     "deploymentOptions": {
-      "instances": 4,
+      "instances": 8,
       "config": {
         "port": 7070,
         "topic": "/eventbus/*",
@@ -35,7 +35,7 @@
   {
     "className": "com.alerter.vertx.verticles.standalone.PipelinePubSubVerticle",
     "deploymentOptions": {
-      "instances": 4
+      "instances": 16
     }
   },
   {
@@ -54,19 +54,19 @@
   {
     "className": "com.alerter.vertx.verticles.activityexecutors.PipelineExecutorVerticle",
     "deploymentOptions": {
-      "instances": 4
+      "instances": 16
     }
   },
   {
     "className": "com.alerter.vertx.verticles.activityexecutors.RunIfMetaExecutorVerticle",
     "deploymentOptions": {
-      "instances": 4
+      "instances": 16
     }
   },
   {
     "className": "com.alerter.vertx.verticles.activityexecutors.SetFieldsExecutorVerticle",
     "deploymentOptions": {
-      "instances": 8
+      "instances": 16
     }
   },
   {
@@ -77,17 +77,20 @@
   {
     "className": "com.alerter.vertx.verticles.activityexecutors.PushFieldsExecutorVerticle",
     "deploymentOptions": {
-      "instances": 4
+      "instances": 16
     }
   },
   {
     "className": "com.alerter.vertx.verticles.activityexecutors.ExcludeFieldsExecutorVerticle",
     "deploymentOptions": {
-      "instances": 4
+      "instances": 8
     }
   },
   {
-    "className": "com.alerter.vertx.verticles.activityexecutors.IncludeFieldsExecutorVerticle"
+    "className": "com.alerter.vertx.verticles.activityexecutors.IncludeFieldsExecutorVerticle",
+    "deploymentOptions": {
+      "instances": 8
+    }
   },
   {
     "className": "com.alerter.vertx.verticles.activityexecutors.ExcludeFilterItemsExecutorVerticle"
@@ -98,7 +101,7 @@
   {
     "className": "com.alerter.vertx.verticles.activityexecutors.ForEachExecutorVerticle",
     "deploymentOptions": {
-      "instances": 4
+      "instances": 16
     }
   },
   {
@@ -113,7 +116,7 @@
   {
     "className": "com.alerter.vertx.verticles.activityexecutors.ScriptRunnerExecutorVerticle",
     "deploymentOptions": {
-      "instances": 4
+      "instances": 8
     }
   },
   {
@@ -140,7 +143,7 @@
   {
     "className": "com.alerter.vertx.verticles.sourcetarget.internal.InternalProfileExecutorVerticle",
     "deploymentOptions": {
-      "instances": 2
+      "instances": 8
     }
   },
   {
@@ -177,7 +180,7 @@
   {
     "className": "com.alerter.vertx.verticles.sourcetarget.generic.PipelinePublishExecutorVerticle",
     "deploymentOptions": {
-      "instances": 4
+      "instances": 8
     }
   },
   {
@@ -195,7 +198,7 @@
   {
     "className": "com.alerter.vertx.verticles.sourcetarget.generic.ElasticsearchExecutorVerticle",
     "deploymentOptions": {
-      "instances": 8, "worker":true
+      "instances": 16, "worker":true
     }
   },
   {
