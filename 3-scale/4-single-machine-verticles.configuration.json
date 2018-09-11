@@ -4,5 +4,11 @@
     "deploymentOptions": {
       "instances": 1
     }
+  },
+  {
+    "className":"com.alerter.vertx.verticles.activityexecutors.BufferedExecutorVerticle",
+    "deploymentOptions": {
+      "instances": 1
+    }
   }
 ]
