@@ -1,5 +1,11 @@
 [
   {
+    "className":"com.alerter.vertx.verticles.DeployPipelinesVerticle",
+    "deploymentOptions":{
+      "instances":1
+    }
+  },
+  {
     "className":"com.alerter.vertx.verticles.activityexecutors.BatchWindowExecutorVerticle",
     "deploymentOptions": {
       "instances": 1
