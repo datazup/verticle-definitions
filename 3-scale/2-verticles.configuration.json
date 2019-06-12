@@ -70,6 +70,12 @@
     }
   },
   {
+    "className":"com.alerter.vertx.verticles.activityexecutors.FunctionExecutorExecutorVerticle",
+    "deploymentOptions":{
+      "instances":2
+    }
+  },
+  {
     "className": "com.alerter.vertx.verticles.activityexecutors.LogExecutorVerticle",
     "deploymentOptions": {
     }
