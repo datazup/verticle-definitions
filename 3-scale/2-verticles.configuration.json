@@ -75,6 +75,7 @@
       "instances":2
     }
   },
+
   {
     "className": "com.alerter.vertx.verticles.activityexecutors.LogExecutorVerticle",
     "deploymentOptions": {
@@ -139,6 +140,12 @@
   },
   {
     "className": "com.alerter.vertx.verticles.activityexecutors.DoWhileExecutorVerticle"
+  },
+  {
+    "className":"com.alerter.vertx.verticles.sourcetarget.NodeFunctionExecutorVerticle",
+    "deploymentOptions":{
+      "instances":1
+    }
   },
   {
     "className": "com.alerter.vertx.verticles.sourcetarget.generic.HttpExecutorVerticle",
