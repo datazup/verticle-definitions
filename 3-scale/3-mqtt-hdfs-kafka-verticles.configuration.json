@@ -1,4 +1,11 @@
+
 [
+  {
+    "className":"com.alerter.vertx.verticles.standalone.RedisListQueueListenerExecutorVerticle",
+    "deploymentOptions":{
+      "instances":1
+    }
+  },
   {
     "className":"com.alerter.vertx.verticles.standalone.KafkaConsumerExecutorVerticle",
     "deploymentOptions":{
