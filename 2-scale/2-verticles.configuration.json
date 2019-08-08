@@ -1,43 +1,42 @@
 [
   {
-    "className":"com.alerter.vertx.verticles.bridge.TcpBridgeVerticle",
-    "deploymentOptions":{
-      "instances":2,
-      "config":{
+    "className": "com.alerter.vertx.verticles.bridge.TcpBridgeVerticle",
+    "deploymentOptions": {
+      "instances": 2,
+      "config": {
         "port": 7000
       }
     }
   },
   {
-    "className":"com.alerter.vertx.verticles.websocket.InternalWebSocketPipelineVerticle",
-    "deploymentOptions":{
-      "config":{
+    "className": "com.alerter.vertx.verticles.websocket.InternalWebSocketPipelineVerticle",
+    "deploymentOptions": {
+      "config": {
         "port": 7071,
-        "topic":"/eventbus/*",
+        "topic": "/eventbus/*",
         "SEND_TIMEOUT": 60000,
         "maxSocketFrameSize": 2147483647
       }
     }
   },
   {
-    "className":"com.alerter.vertx.verticles.pipeline.OnEventPipelineVerticle"
+    "className": "com.alerter.vertx.verticles.pipeline.OnEventPipelineVerticle"
   },
   {
-    "className":"com.alerter.vertx.verticles.pipeline.RunnablePipelineVerticle",
-    "deploymentOptions":{
-      "instances":4
+    "className": "com.alerter.vertx.verticles.pipeline.RunnablePipelineVerticle",
+    "deploymentOptions": {
+      "instances": 4
     }
   },
   {
-    "className":"com.alerter.vertx.verticles.standalone.PipelinePubSubVerticle",
-    "deploymentOptions":{
-
+    "className": "com.alerter.vertx.verticles.standalone.PipelinePubSubVerticle",
+    "deploymentOptions": {
     }
   },
   {
-    "className":"com.alerter.vertx.verticles.standalone.PipelineTcpServerVerticle",
-    "deploymentOptions":{
-      "config":{
+    "className": "com.alerter.vertx.verticles.standalone.PipelineTcpServerVerticle",
+    "deploymentOptions": {
+      "config": {
         "port": 9071,
         "SEND_TIMEOUT": 60000,
         "maxSocketFrameSize": 2147483647
@@ -45,151 +44,154 @@
     }
   },
   {
-    "className":"com.alerter.vertx.verticles.pipeline.PipelineExecutionListenerVerticle"
+    "className": "com.alerter.vertx.verticles.pipeline.PipelineExecutionListenerVerticle"
   },
-
   {
-    "className":"com.alerter.vertx.verticles.activityexecutors.PipelineExecutorVerticle",
-    "deploymentOptions":{
-      "instances":4
+    "className": "com.alerter.vertx.verticles.activityexecutors.PipelineExecutorVerticle",
+    "deploymentOptions": {
+      "instances": 4
     }
   },
   {
-    "className":"com.alerter.vertx.verticles.activityexecutors.RunIfMetaExecutorVerticle",
-    "deploymentOptions":{
-      "instances":4
+    "className": "com.alerter.vertx.verticles.activityexecutors.RunIfMetaExecutorVerticle",
+    "deploymentOptions": {
+      "instances": 4
     }
   },
   {
-    "className":"com.alerter.vertx.verticles.activityexecutors.SetFieldsExecutorVerticle",
-    "deploymentOptions":{
-      "instances":4
+    "className": "com.alerter.vertx.verticles.activityexecutors.RunSwitchMetaExecutorVerticle",
+    "deploymentOptions": {
+      "instances": 2
     }
   },
   {
-    "className":"com.alerter.vertx.verticles.activityexecutors.LogExecutorVerticle",
-    "deploymentOptions":{
-
+    "className": "com.alerter.vertx.verticles.activityexecutors.SetFieldsExecutorVerticle",
+    "deploymentOptions": {
+      "instances": 4
     }
   },
   {
-    "className":"com.alerter.vertx.verticles.activityexecutors.PushFieldsExecutorVerticle",
-    "deploymentOptions":{
-      "instances":4
+    "className": "com.alerter.vertx.verticles.activityexecutors.LogExecutorVerticle",
+    "deploymentOptions": {
     }
+  },
+  {
+    "className": "com.alerter.vertx.verticles.activityexecutors.PushFieldsExecutorVerticle",
+    "deploymentOptions": {
+      "instances": 4
+    }
+  },
+  {
+    "className": "com.alerter.vertx.verticles.activityexecutors.ExcludeFieldsExecutorVerticle"
+  },
+  {
+    "className": "com.alerter.vertx.verticles.activityexecutors.IncludeFieldsExecutorVerticle"
+  },
+  {
+    "className": "com.alerter.vertx.verticles.activityexecutors.ExcludeFilterItemsExecutorVerticle"
+  },
+  {
+    "className": "com.alerter.vertx.verticles.activityexecutors.IncludeFilterItemsExecutorVerticle"
+  },
+  {
+    "className": "com.alerter.vertx.verticles.activityexecutors.ForEachExecutorVerticle",
+    "deploymentOptions": {
+      "instances": 4
+    }
+  },
+  {
+    "className": "com.alerter.vertx.verticles.activityexecutors.GroupByExecutorVerticle",
+    "deploymentOptions": {
+      "instances": 4
+    }
+  },
+  {
+    "className": "com.alerter.vertx.verticles.activityexecutors.ScraperExecutorVerticle"
+  },
+  {
+    "className": "com.alerter.vertx.verticles.activityexecutors.ScriptRunnerExecutorVerticle"
+  },
+  {
+    "className": "com.alerter.vertx.verticles.activityexecutors.FunctionRunnerExecutorVerticle"
+  },
+  {
+    "className": "com.alerter.vertx.verticles.activityexecutors.SetTimeoutExecutorVerticle"
+  },
+  {
+    "className": "com.alerter.vertx.verticles.activityexecutors.DoTimesExecutorVerticle"
+  },
+  {
+    "className": "com.alerter.vertx.verticles.activityexecutors.DoWhileExecutorVerticle"
+  },
+  {
+    "className": "com.alerter.vertx.verticles.sourcetarget.generic.HttpExecutorVerticle",
+    "deploymentOptions": {
+      "instances": 8
+    }
+  },
+  {
+    "className": "com.alerter.vertx.verticles.sourcetarget.generic.EmailExecutorVerticle"
+  },
+  {
+    "className": "com.alerter.vertx.verticles.sourcetarget.generic.MongoDbExecutorVerticle",
+    "deploymentOptions": {
+      "instances": 8
+    }
+  },
+  {
+    "className": "com.alerter.vertx.verticles.sourcetarget.generic.RedisExecutorVerticle",
+    "deploymentOptions": {
+      "instances": 1
+    }
+  },
+  {
+    "className": "com.alerter.vertx.verticles.sourcetarget.generic.SqlExecutorVerticle",
+    "deploymentOptions": {
+      "instances": 8,
+      "worker": true
+    }
+  },
+  {
+    "className": "com.alerter.vertx.verticles.sourcetarget.generic.DashboardExecutorVerticle"
+  },
+  {
+    "className": "com.alerter.vertx.verticles.sourcetarget.generic.PipelineInvokeExecutorVerticle",
+    "deploymentOptions": {
+      "instances": 4
+    }
+  },
+  {
+    "className": "com.alerter.vertx.verticles.sourcetarget.generic.PipelinePublishExecutorVerticle",
+    "deploymentOptions": {
+      "instances": 4
+    }
+  },
+  {
+    "className": "com.alerter.vertx.verticles.sourcetarget.social.SNSVerticleMonitor"
+  },
+  {
+    "className": "com.alerter.vertx.verticles.activityexecutors.ReportingExecutorVerticle",
+    "deploymentOptions": {
+      "instances": 4
+    }
+  },
+  {
+    "className": "com.alerter.vertx.verticles.sourcetarget.generic.ElasticsearchExecutorVerticle",
+    "deploymentOptions": {
+      "instances": 4,
+      "worker": true
+    }
+  },
+  {
+    "className": "com.alerter.vertx.verticles.standalone.PipelineFutureRunnerVerticle",
+    "deploymentOptions": {
+      "instances": 2
+    }
+  },
+  {
+    "className": "com.alerter.vertx.verticles.sourcetarget.internal.InternalProfileExecutorVerticle"
+  },
+  {
+    "className": "com.alerter.vertx.verticles.sourcetarget.generic.S3ExecutorVerticle"
   }
-  ,{
-  "className":"com.alerter.vertx.verticles.activityexecutors.ExcludeFieldsExecutorVerticle"
-}
-  ,{
-  "className":"com.alerter.vertx.verticles.activityexecutors.IncludeFieldsExecutorVerticle"
-},
-  {
-    "className":"com.alerter.vertx.verticles.activityexecutors.ExcludeFilterItemsExecutorVerticle"
-  },
-  {
-    "className":"com.alerter.vertx.verticles.activityexecutors.IncludeFilterItemsExecutorVerticle"
-  },
-  {
-    "className":"com.alerter.vertx.verticles.activityexecutors.ForEachExecutorVerticle",
-    "deploymentOptions":{
-      "instances":4
-    }
-  },
-  {
-    "className":"com.alerter.vertx.verticles.activityexecutors.GroupByExecutorVerticle",
-    "deploymentOptions":{
-      "instances":4
-    }
-  },
-  {
-    "className":"com.alerter.vertx.verticles.activityexecutors.ScraperExecutorVerticle"
-  },
-  {
-    "className":"com.alerter.vertx.verticles.activityexecutors.ScriptRunnerExecutorVerticle"
-  },
-  {
-    "className":"com.alerter.vertx.verticles.activityexecutors.FunctionRunnerExecutorVerticle"
-  },
-  {
-    "className":"com.alerter.vertx.verticles.activityexecutors.SetTimeoutExecutorVerticle"
-  },
-  {
-    "className":"com.alerter.vertx.verticles.activityexecutors.DoTimesExecutorVerticle"
-  },
-  {
-    "className":"com.alerter.vertx.verticles.activityexecutors.DoWhileExecutorVerticle"
-  },
-  {
-    "className":"com.alerter.vertx.verticles.sourcetarget.generic.HttpExecutorVerticle",
-    "deploymentOptions":{
-      "instances":8
-    }
-  },
-  {
-    "className":"com.alerter.vertx.verticles.sourcetarget.generic.EmailExecutorVerticle"
-  },
-  {
-    "className":"com.alerter.vertx.verticles.sourcetarget.generic.MongoDbExecutorVerticle",
-    "deploymentOptions":{
-      "instances":8
-    }
-  },
-  {
-    "className":"com.alerter.vertx.verticles.sourcetarget.generic.RedisExecutorVerticle",
-    "deploymentOptions":{
-      "instances":1
-    }
-  },
-
-  {
-    "className":"com.alerter.vertx.verticles.sourcetarget.generic.SqlExecutorVerticle",
-    "deploymentOptions":{
-      "instances":8,
-      "worker":true
-    }
-  },
-  {
-    "className":"com.alerter.vertx.verticles.sourcetarget.generic.DashboardExecutorVerticle"
-  },
-  {
-    "className":"com.alerter.vertx.verticles.sourcetarget.generic.PipelineInvokeExecutorVerticle",
-    "deploymentOptions":{
-      "instances":4
-    }
-  },
-  {
-    "className":"com.alerter.vertx.verticles.sourcetarget.generic.PipelinePublishExecutorVerticle",
-    "deploymentOptions":{
-      "instances":4
-    }
-  },
-  {
-    "className":"com.alerter.vertx.verticles.sourcetarget.social.SNSVerticleMonitor"
-  },
-  {
-    "className":"com.alerter.vertx.verticles.activityexecutors.ReportingExecutorVerticle",
-    "deploymentOptions":{
-      "instances":4
-    }
-  },
-  {
-    "className":"com.alerter.vertx.verticles.sourcetarget.generic.ElasticsearchExecutorVerticle",
-    "deploymentOptions":{
-      "instances":4,"worker":true
-    }
-  },
-  {
-    "className":"com.alerter.vertx.verticles.standalone.PipelineFutureRunnerVerticle",
-    "deploymentOptions":{
-      "instances":2
-    }
-  },
-  {
-    "className":"com.alerter.vertx.verticles.sourcetarget.internal.InternalProfileExecutorVerticle"
-  },
-  {
-    "className":"com.alerter.vertx.verticles.sourcetarget.generic.S3ExecutorVerticle"
-  }
-
 ]
