@@ -2,7 +2,7 @@
   {
     "className": "com.alerter.vertx.verticles.bridge.TcpBridgeVerticle",
     "deploymentOptions": {
-      "instances": 16,
+      "instances": 4,
       "config": {
         "port": 7000
       }
@@ -23,19 +23,19 @@
   {
     "className": "com.alerter.vertx.verticles.pipeline.OnEventPipelineVerticle",
     "deploymentOptions": {
-      "instances": 4
+      "instances": 2
     }
   },
   {
     "className": "com.alerter.vertx.verticles.pipeline.RunnablePipelineVerticle",
     "deploymentOptions": {
-      "instances": 4
+      "instances": 2
     }
   },
   {
     "className": "com.alerter.vertx.verticles.standalone.PipelinePubSubVerticle",
     "deploymentOptions": {
-      "instances": 16
+      "instances": 4
     }
   },
   {
@@ -54,19 +54,26 @@
   {
     "className": "com.alerter.vertx.verticles.activityexecutors.PipelineExecutorVerticle",
     "deploymentOptions": {
-      "instances": 16
+      "instances": 4
     }
   },
   {
     "className": "com.alerter.vertx.verticles.activityexecutors.RunIfMetaExecutorVerticle",
     "deploymentOptions": {
-      "instances": 16
+      "instances": 8
     }
   },
   {
+    "className": "com.alerter.vertx.verticles.activityexecutors.RunSwitchMetaExecutorVerticle",
+    "deploymentOptions": {
+      "instances": 2
+    }
+  },
+  ,
+  {
     "className": "com.alerter.vertx.verticles.activityexecutors.SetFieldsExecutorVerticle",
     "deploymentOptions": {
-      "instances": 16
+      "instances": 8
     }
   },
   {
@@ -84,19 +91,19 @@
   {
     "className": "com.alerter.vertx.verticles.activityexecutors.PushFieldsExecutorVerticle",
     "deploymentOptions": {
-      "instances": 16
+      "instances": 8
     }
   },
   {
     "className": "com.alerter.vertx.verticles.activityexecutors.ExcludeFieldsExecutorVerticle",
     "deploymentOptions": {
-      "instances": 8
+      "instances": 2
     }
   },
   {
     "className": "com.alerter.vertx.verticles.activityexecutors.IncludeFieldsExecutorVerticle",
     "deploymentOptions": {
-      "instances": 8
+      "instances": 2
     }
   },
   {
@@ -108,7 +115,7 @@
   {
     "className": "com.alerter.vertx.verticles.activityexecutors.ForEachExecutorVerticle",
     "deploymentOptions": {
-      "instances": 16
+      "instances": 4
     }
   },
   {
@@ -123,13 +130,13 @@
   {
     "className": "com.alerter.vertx.verticles.activityexecutors.ScriptRunnerExecutorVerticle",
     "deploymentOptions": {
-      "instances": 8
+      "instances": 4
     }
   },
   {
     "className": "com.alerter.vertx.verticles.activityexecutors.FunctionRunnerExecutorVerticle",
     "deploymentOptions": {
-      "instances": 4
+      "instances": 2
     }
   },
   {
@@ -150,13 +157,13 @@
   {
     "className": "com.alerter.vertx.verticles.sourcetarget.generic.HttpExecutorVerticle",
     "deploymentOptions": {
-      "instances": 2
+      "instances": 4
     }
   },
   {
     "className": "com.alerter.vertx.verticles.sourcetarget.internal.InternalProfileExecutorVerticle",
     "deploymentOptions": {
-      "instances": 8
+      "instances": 2
     }
   },
   {
@@ -187,19 +194,19 @@
   {
     "className": "com.alerter.vertx.verticles.sourcetarget.generic.PipelineInvokeExecutorVerticle",
     "deploymentOptions": {
-      "instances": 4
+      "instances": 2
     }
   },
   {
     "className": "com.alerter.vertx.verticles.sourcetarget.generic.PipelinePublishExecutorVerticle",
     "deploymentOptions": {
-      "instances": 8
+      "instances": 4
     }
   },
   {
     "className": "com.alerter.vertx.verticles.sourcetarget.social.SNSVerticleMonitor",
     "deploymentOptions": {
-      "instances": 4
+      "instances": 2
     }
   },
   {
@@ -211,7 +218,7 @@
   {
     "className": "com.alerter.vertx.verticles.sourcetarget.generic.ElasticsearchExecutorVerticle",
     "deploymentOptions": {
-      "instances": 16, "worker":true
+      "instances": 4, "worker":true
     }
   },
   {
@@ -223,7 +230,7 @@
   {
     "className": "com.alerter.vertx.verticles.standalone.PipelineFutureRunnerVerticle",
     "deploymentOptions": {
-      "instances": 4
+      "instances": 2
     }
   }
 ]
