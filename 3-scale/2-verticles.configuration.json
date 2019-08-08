@@ -69,7 +69,6 @@
       "instances": 2
     }
   },
-  ,
   {
     "className": "com.alerter.vertx.verticles.activityexecutors.SetFieldsExecutorVerticle",
     "deploymentOptions": {
