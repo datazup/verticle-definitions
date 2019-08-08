@@ -2,7 +2,7 @@
   {
     "className": "com.alerter.vertx.verticles.bridge.TcpBridgeVerticle",
     "deploymentOptions": {
-      "instances": 4,
+      "instances": 8,
       "config": {
         "port": 7000
       }
@@ -29,13 +29,13 @@
   {
     "className": "com.alerter.vertx.verticles.pipeline.RunnablePipelineVerticle",
     "deploymentOptions": {
-      "instances": 2
+      "instances": 4
     }
   },
   {
     "className": "com.alerter.vertx.verticles.standalone.PipelinePubSubVerticle",
     "deploymentOptions": {
-      "instances": 4
+      "instances": 8
     }
   },
   {
@@ -54,7 +54,7 @@
   {
     "className": "com.alerter.vertx.verticles.activityexecutors.PipelineExecutorVerticle",
     "deploymentOptions": {
-      "instances": 4
+      "instances": 16
     }
   },
   {
@@ -72,13 +72,13 @@
   {
     "className": "com.alerter.vertx.verticles.activityexecutors.SetFieldsExecutorVerticle",
     "deploymentOptions": {
-      "instances": 8
+      "instances": 16
     }
   },
   {
     "className": "com.alerter.vertx.verticles.activityexecutors.FunctionExecutorExecutorVerticle",
     "deploymentOptions": {
-      "instances": 2
+      "instances": 4
     }
   },
   {
@@ -113,7 +113,7 @@
   {
     "className": "com.alerter.vertx.verticles.activityexecutors.ForEachExecutorVerticle",
     "deploymentOptions": {
-      "instances": 4
+      "instances": 8
     }
   },
   {
@@ -134,7 +134,7 @@
   {
     "className": "com.alerter.vertx.verticles.activityexecutors.FunctionRunnerExecutorVerticle",
     "deploymentOptions": {
-      "instances": 2
+      "instances": 4
     }
   },
   {
@@ -192,7 +192,7 @@
   {
     "className": "com.alerter.vertx.verticles.sourcetarget.generic.PipelineInvokeExecutorVerticle",
     "deploymentOptions": {
-      "instances": 2
+      "instances": 4
     }
   },
   {
@@ -204,7 +204,7 @@
   {
     "className": "com.alerter.vertx.verticles.sourcetarget.social.SNSVerticleMonitor",
     "deploymentOptions": {
-      "instances": 2
+      "instances": 4
     }
   },
   {
@@ -216,7 +216,7 @@
   {
     "className": "com.alerter.vertx.verticles.sourcetarget.generic.ElasticsearchExecutorVerticle",
     "deploymentOptions": {
-      "instances": 4,
+      "instances": 8,
       "worker": true
     }
   },

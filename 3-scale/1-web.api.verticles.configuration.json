@@ -2,6 +2,7 @@
   {
     "className":"com.alerter.vertx.verticles.websocket.ClientWebSocketPipelineVerticle",
     "deploymentOptions":{
+      "instances":2,
       "config":{
         "port": 7080,
         "topic":"/dashboard/*",
@@ -14,6 +15,7 @@
   {
     "className":"com.alerter.vertx.verticles.webserver.SwaggerTenantWebServerVerticle",
     "deploymentOptions":{
+      "instances":4,
       "config":{
         "port": 8086,
         "swaggerConfig":{
@@ -29,6 +31,7 @@
   {
     "className":"com.alerter.vertx.verticles.webserver.HtmlTenantWebServerVerticle",
     "deploymentOptions":{
+      "instances":4,
       "config":{
         "port": 8087
       }
